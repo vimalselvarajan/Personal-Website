@@ -128,7 +128,7 @@ nav .desktop-nav li .link {
     max-width: 950px;
     margin: 0 auto;
     grid-template-columns: repeat(1, 1fr);
-    height: 95vh;
+    height: 100vh;
     padding-left: 0;
     padding-right: 0;
 }
@@ -300,7 +300,7 @@ nav .desktop-nav li .link {
     .nav-container .desktop-nav {
         flex-direction: column;
         position: fixed;
-        top: 88px;
+        top: 118px;
         left: 0;
         width: 100%;
         height: 0vh;
@@ -427,6 +427,22 @@ nav .desktop-nav li .link {
 
     .link-logo {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-contatiner {
+        margin-top: 100px;
+    }
+    
+    .clients-main {
+        grid-template-areas: "a a" "b b";
+        padding: 0px 30px;
+        padding-bottom: 75px;
+    }
+
+    .clients-header header {
+        margin-bottom: 75px;
     }
 }
 
