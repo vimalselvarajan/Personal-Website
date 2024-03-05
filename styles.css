@@ -432,7 +432,9 @@ nav .desktop-nav li .link {
 
 @media (max-width: 500px) {
     .main-contatiner {
-        margin-top: 100px;
+        margin-top: 118px;
+        height: 100%;
+        padding-bottom: 75px;
     }
     
     .clients-main {
