@@ -1,4 +1,4 @@
-# Vimal Selvarajan Personal Website
+# Vimal Selvarajan personal website
 
 Welcome to the repository for my personal website! This site features my portfolio, clients, and resume. It's built with HTML5, CSS and JavaScrip and is hosted on GitHub Pages.
 
