@@ -9,7 +9,7 @@
 
     <title>VS Website</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="light-theme.css" id="theme-link">
     <link rel="shortcut icon" type="image/x-icon" href="mini_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,14 +21,15 @@
 
     <div class="nav-container">
         <nav>
-            <a href="index.html" class="link-logo"> 
+            <a href="index.html" class="link-logo-light">
                 <img src="vs_logo.png">
             </a>
-
-            <a href="index.html" class="link-logo-mobile"> 
+            <a href="index.html" class="link-logo-dark">
+                <img src="vs_logo_dark.png">
+            </a>
+            <a href="index.html" class="link-logo-mobile">
                 <img src="vs_logo.png">
             </a>
-
             <ul class="mobile-nav">
                 <li>
                     <div class="menu-icon-container">
@@ -40,16 +41,15 @@
                     </div>
                 </li>
             </ul>
-
             <ul class="desktop-nav">
-                <li class="normal-link">
-                    <a href="index.html" class="link">HOME</a>
-                </li>
-                <li class="normal-link">
-                    <a href="clients.html" class="link">CLIENTS</a>
-                </li>
-                <li class="normal-link">
-                    <a href="projects.html" class="link">PROJECTS</a>
+                <li class="normal-link"><a href="index.html" class="link">HOME</a></li>
+                <li class="normal-link"><a href="clients.html" class="link">CLIENTS</a></li>
+                <li class="normal-link"><a href="projects.html" class="link">PROJECTS</a></li>
+                <li class="nav-mode-btn">
+                    <button class="theme-btn">
+                        <span></span>
+                        <span></span>
+                    </button>
                 </li>
             </ul>
         </nav>

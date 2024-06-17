@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* BASIC SETUP */
+
+*,
+*::after
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    height: 100%;
+    background: hsla(40, 82%, 98%, 1);
+    background: linear-gradient(225deg, hsla(40, 82%, 98%, 1) 0%, hsla(204, 56%, 98%, 1) 46%, hsla(127, 31%, 95%, 1) 100%);
+    background: -moz-linear-gradient(225deg, hsla(40, 82%, 98%, 1) 0%, hsla(204, 56%, 98%, 1) 46%, hsla(127, 31%, 95%, 1) 100%);
+    background: -webkit-linear-gradient(225deg, hsla(40, 82%, 98%, 1) 0%, hsla(204, 56%, 98%, 1) 46%, hsla(127, 31%, 95%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FEFBF5", endColorstr="#F8FBFD", GradientType=1 );
+}
+
+/* BASIC SETUP */
+
+/* NAV BAR SETUP */
+
+.nav-container {
+    z-index: 100;
+    position: fixed;
+    transition: background-color 0.4s ease-in-out;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.nav-container.scrolled {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.nav-container nav {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 25px 36px;
+    height: 100%;
+    display: flex;
+}
+
+nav .desktop-nav {
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav .desktop-nav li{
+    line-height: 32px;
+}
+
+nav .desktop-nav .normal-link{
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: color .3s, background-color .3s,border .3s;
+}
+
+nav .desktop-nav .normal-link:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+nav .desktop-nav .nav-mode-btn{
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: color .3s, background-color .3s,border .3s;
+}
+
+nav .desktop-nav li .link {
+    color: grey;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-decoration: none; 
+}
+
+.link-logo-light {
+  display: block;
+  margin-right: auto;
+}
+
+.link-logo-dark {
+    display: none;
+    margin-right: auto;
+  }
+
+.link-logo-light img {
+    height: 64px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.enroll-btn {
+    padding: 13px 24px;
+    border-radius: 8px;
+    border: 1px solid #d3d3d3;
+    color: grey;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    transition: color .3s, background-color .3s,border .3s;
+    text-decoration: none;
+}
+
+.enroll-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.link-logo-mobile {
+    display: none;
+    margin-right: auto;
+}
+
+.link-logo-mobile img {
+    height: 64px;
+}
+
+/* NAV BAR SETUP */
+
+/* MAIN SETUP */
+
+.main-contatiner {
+    display: grid;
+    max-width: 950px;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-contatiner .dark-mode-btn{
+    align-items: center;
+    display: grid;
+    grid-column: span 1;
+    gap: 2rem;
+}
+
+.main-contatiner .span-1 {
+    align-items: center;
+    display: grid;
+    grid-column: span 1;
+    padding: 0 2.25rem;
+    gap: 2rem;
+}
+
+.span-1 header{
+    font-size: 2.75rem;
+    font-weight: 600;
+    display: flex;
+}
+
+.intro-cont {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.intro-text {
+    font-size: 0.95rem;
+    line-height: 2.3rem;
+    font-weight: 300;
+    display: flex;
+}
+
+.intro-text-other {
+    font-size: 0.95rem;
+    line-height: 2.3rem;
+    font-weight: 300;
+}
+
+.intro-text-other a{
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: normal;
+    cursor: pointer;
+    color: black;
+}
+
+.intro-text-other a:hover{
+    color: #0047AB;
+    text-decoration: underline;
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.icon-row .icons {
+    padding: 5px 0px;
+}
+
+.icon-row .light-icons {
+    display: flex;
+}
+
+.icon-row .dark-icons {
+    display: none;
+}
+
+.icon-row .resume{
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: normal;
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+    line-height: 40px;
+    padding: 0px 12px;
+    border-radius: 8px;
+    background-color: #FEDE00;
+    transition: color .3s, background-color .3s, border .3s;
+}
+
+.icon-row .resume:hover{
+    background-color: #f0f0f0;
+}
+
+.vh-container {
+    height: 95vh;
+    margin-top: 150px;
+}
+
+/* Style for the btn-toggle button */
+.theme-btn {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 0;
+}
+
+.theme-btn:focus {
+    outline: none; /* Not ideal for accessibility */
+}
+
+.theme-btn:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.theme-btn span:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.theme-btn span:nth-child(2)::before {
+    content: '\2600'; /* Font Awesome sun icon */
+    color: #d6d7db;
+    font-size: 20px;
+}
+
+/* MAIN SETUP */
+
+/* CLIENTS SETUP */
+
+.clients-header {
+    display: grid;
+    gap: 3.5rem;
+}
+
+.clients-header header {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    font-size: 2.95rem;
+    margin-bottom: 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.clients-main {
+    display: grid;
+    max-width: 950px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    grid-template-areas: "a b";
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.clients-main-span-1 {
+    display: grid;
+    gap: 4rem;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.clients-main-span-1 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.clients-main-span-1 .container img{
+    width: 100%;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.clients-main-span-1 .container a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0px 32px;
+    text-decoration: none;
+    color: black;
+    transition: color .3s, background-color .3s, border .3s;
+}
+
+.clients-main-span-1 .container a:hover {
+    color: #0047AB;
+    text-decoration: underline;
+}
+
+.clients-main-span-1 .container .description{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    margin: 0px 32px;
+}
+
+.clients-main-span-1 .container .skils{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px 32px;
+    gap: 10px;
+}
+
+.clients-main-span-1 .container .skils .pill{
+    background-color: #F2F2F2;
+    font-size: 0.688rem;
+    line-height: 1.063rem;
+    border-radius: 3.125rem;
+    padding: 4px 10px;
+}
+
+/* CLIENTS SETUP */
+
+@media (max-width: 825px) {
+
+    .nav-container .desktop-nav {
+        flex-direction: column;
+        position: fixed;
+        top: 118px;
+        left: 0;
+        width: 100%;
+        height: 0vh;
+        background-color: white;
+        justify-content: start;
+        overflow: hidden;
+        z-index: -1;
+        transition: all 1000ms ease;
+        align-items: normal;
+        gap: 10px;
+    }
+
+    .nav-container.active .desktop-nav {
+        height: 100vh;
+    }
+
+    nav .desktop-nav .normal-link:hover{
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .nav-container .desktop-nav li {
+        line-height: 48px;
+        padding: 0px 52px;
+    }
+
+    nav .mobile-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-container .desktop-nav .normal-link a {
+        display: inline-block;
+        border-bottom: 1px solid #616161;
+        width: 100%;
+        font-size: var(--font-size-s);
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: all 700ms ease;
+    }
+
+    .nav-container.active .desktop-nav li a {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    nav .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    nav .menu-icon-container {
+        width: 20px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px 0px;
+    }
+
+    nav .menu-icon {
+        position: relative;
+        width: 100%;
+    }
+
+    nav .menu-icon .line-1,
+    nav .menu-icon .line-2 {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: black;
+        transition-property: transform, top;
+        transition-delay: 0ms, 160ms;
+        transition-duration: 200ms;
+    }
+
+    nav .menu-icon .line-3 {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: black;
+        transition-property: transform, top;
+        transition-delay: 0ms, 160ms;
+        transition-duration: 200ms;
+    }
+
+    nav .menu-icon .line-1 {
+        top: -4px;
+    }
+
+    nav .menu-icon .line-2 {
+        top: 2px;
+    }
+
+    nav .menu-icon .line-3 {
+        top: 8px;
+    }
+
+    .nav-container.active nav .menu-icon-container .menu-icon .line-1 {
+        top: 0;
+        transform: rotateZ(45deg);
+        transition-property: top, transform;
+        transition-delay: 0ms, 160ms;
+        transition-duration: 200ms;
+    }
+
+    .nav-container.active nav .menu-icon-container .menu-icon .line-2 {
+        top: 0;
+        transform: rotateZ(-45deg);
+        transition-property: top, transform;
+        transition-delay: 0ms, 160ms;
+        transition-duration: 200ms;
+    }
+
+    .nav-container.active nav .menu-icon-container .menu-icon .line-3 {
+        display: none;
+    }
+
+    .link-logo-mobile {
+        display: block;
+    }
+
+    .link-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-contatiner {
+        margin-top: 118px;
+        height: 100%;
+        padding-bottom: 75px;
+    }
+    
+    .clients-main {
+        grid-template-areas: "a a" "b b";
+        padding: 0px 30px;
+        padding-bottom: 75px;
+    }
+
+    .clients-header header {
+        margin-bottom: 75px;
+    }
+}
+
+/* NAV BAR SETUP */

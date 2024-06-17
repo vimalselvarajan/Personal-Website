@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>VS Website</title>
-
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="light-theme.css" id="theme-link">
     <link rel="shortcut icon" type="image/x-icon" href="mini_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script defer src="script.js"></script> 
-
 </head>
 
 <body>
 
     <div class="nav-container">
         <nav>
-            <a href="index.html" class="link-logo"> 
+            <a href="index.html" class="link-logo-light">
                 <img src="vs_logo.png">
             </a>
-
-            <a href="index.html" class="link-logo-mobile"> 
+            <a href="index.html" class="link-logo-dark">
+                <img src="vs_logo_dark.png">
+            </a>
+            <a href="index.html" class="link-logo-mobile">
                 <img src="vs_logo.png">
             </a>
-
             <ul class="mobile-nav">
                 <li>
                     <div class="menu-icon-container">
@@ -40,16 +36,15 @@
                     </div>
                 </li>
             </ul>
-
             <ul class="desktop-nav">
-                <li class="normal-link">
-                    <a href="index.html" class="link">HOME</a>
-                </li>
-                <li class="normal-link">
-                    <a href="clients.html" class="link">CLIENTS</a>
-                </li>
-                <li class="normal-link">
-                    <a href="projects.html" class="link">PROJECTS</a>
+                <li class="normal-link"><a href="index.html" class="link">HOME</a></li>
+                <li class="normal-link"><a href="clients.html" class="link">CLIENTS</a></li>
+                <li class="normal-link"><a href="projects.html" class="link">PROJECTS</a></li>
+                <li class="nav-mode-btn">
+                    <button class="theme-btn">
+                        <span></span>
+                        <span></span>
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -58,21 +53,24 @@
     <div class="main-contatiner">
         <div class="span-1">
             <div class="intro-cont">
-                <header>
-                    Vimal Selvarajan
-                </header>
-                <div class="intro-text">
-                    Hello, I'm Vimal Selvarajan, a sophomore CS student at the University of California, Riverside. I have a keen interest in Firmware development, PCB Design, and Web Development.  I'm currently exploring firmware and software internship opportunities for the summer. 
-                </div>
-                <div class="intro-text-other">
-                    I spend my days working on <a target="_blank" href="projects.html">PROJECTS</a> that peak my interest. One project that particularly captivates me is developing the <a target="_blank" href="ergo.html">DRIVER INTERFACE</a> for our competitive racing vehicle at FSAE Highlander Racing.
-                </div>
-                <div class="intro-text-other">
-                    <b>CONTACT ME:</b> vimalselvarajan@gmail.com
-                </div>
+                <header>Vimal Selvarajan</header>
+                <div class="intro-text">Hello, I'm Vimal Selvarajan, a sophomore CS student at the University of California, Riverside. I have a keen interest in Firmware development, PCB Design, and Web Development. I'm currently exploring firmware and software internship opportunities for the summer.</div>
+                <div class="intro-text-other">I spend my days working on <a target="_blank" href="projects.html">PROJECTS</a> that peak my interest. One project that particularly captivates me is developing the <a target="_blank" href="ergo.html">DRIVER INTERFACE</a> for our competitive racing vehicle at FSAE Highlander Racing.</div>
+                <div class="intro-text-other"><b>CONTACT ME:</b> vimalselvarajan@gmail.com</div>
                 <div class="icon-row">
-                    <a href="https://github.com/vimalselvarajan" target="_blank" class="icons"><i class="fa fa-github" style="font-size: 30px; color: #333;"></i></a>
-                    <a href="#" target="_blank" class="icons"><i class="fa fa-linkedin-square" style="font-size: 30px; color: #0077B5;"></i></a>
+                    <div class="light-icons">
+                        <a href="https://github.com/vimalselvarajan" target="_blank" class="icons"><i class="fa fa-github" style="font-size: 30px; color: #2b3137;"></i></a>
+                    </div>
+                    <div class="light-icons">
+                        <a href="#" target="_blank" class="icons"><i class="fa fa-linkedin-square" style="font-size: 30px; color: #0077B5;"></i></a>
+                    </div>
+                    <div class="dark-icons">
+                        <a href="https://github.com/vimalselvarajan" target="_blank" class="icons"><i class="fa fa-github" style="font-size: 30px; color: white;"></i></a>
+                    </div>
+                    <div class="dark-icons">
+                        <a href="#" target="_blank" class="icons"><i class="fa fa-linkedin-square" style="font-size: 30px; color: white;"></i></a>
+                    </div>
+
                     <a href="https://drive.google.com/file/d/1Cpo57gVLJVocb71hyjklVVglpZ3ynLQ-/view?usp=sharing" target="_blank" class="resume">RESUME</a>
                 </div>
             </div>
@@ -80,3 +78,4 @@
     </div>
 
 </body>
+</html>
