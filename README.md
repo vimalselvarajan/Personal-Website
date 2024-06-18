@@ -1,24 +1,17 @@
-# Vimal Selvarajan Personal Website
+# Vimal Selvarajan personal website
 
-Welcome to the repository for my personal website! This site features my portfolio, blog, and contact information. It's built with [Technology Used] and hosted on GitHub Pages.
+Welcome to the repository for my personal website! This site features my portfolio, clients, and resume. It's built with HTML5, CSS and JavaScrip and is hosted on GitHub Pages.
 
 ## Features
 
-- **Portfolio:** Showcases my projects and achievements.
-- **Blog:** Insights and updates on my interests and activities.
-- **Contact:** Ways to reach me directly.
+- **Portfolio:** Displays a collection of my completed projects, highlighting the skills and expertise I bring to each endeavor.
+- **CLients** Presents a detailed list of my clients showcasing the impact of my work.
+- **Resume**  Provides an overview of my professional background, including education, skills, and experience.
 
 ## Technology Stack
 
 - HTML/CSS/JavaScript
-- [Other Technologies Used]
 - Hosted on GitHub Pages
 
-## Local Development
 
-To set up this project locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/[YourGitHubUsername]/[YourGitHubUsername].github.io
 
