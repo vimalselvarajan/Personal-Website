@@ -134,6 +134,15 @@ nav .desktop-nav li .link {
     height: 64px;
 }
 
+.link-logo-mobile-dark {
+    display: none;
+    margin-right: auto;
+}
+
+.link-logo-mobile-dark img {
+    height: 64px;
+}
+
 /* NAV BAR SETUP */
 
 /* MAIN SETUP */
@@ -396,6 +405,7 @@ nav .desktop-nav li .link {
     }
 
     .nav-container.active .desktop-nav {
+        padding: 10px 0px;
         height: 100vh;
     }
 
@@ -503,8 +513,12 @@ nav .desktop-nav li .link {
         display: none;
     }
 
-    .link-logo-mobile {
+    .link-logo-mobile-light {
         display: block;
+    }
+
+    .link-logo-mobile-dark {
+        display: none;
     }
 
     .link-logo {
