@@ -322,7 +322,7 @@ nav .desktop-nav li .link {
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    grid-template-areas: "a b";
+    grid-template-areas: "a b" "c d";
     padding-left: 0;
     padding-right: 0;
 }
