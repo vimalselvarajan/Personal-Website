@@ -534,7 +534,7 @@ nav .desktop-nav li .link {
     }
     
     .clients-main {
-        grid-template-areas: "a a" "b b";
+        grid-template-areas: "a a" "b b" "c c";
         padding: 0px 30px;
         padding-bottom: 75px;
     }
