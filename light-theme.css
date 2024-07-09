@@ -247,8 +247,8 @@ nav .desktop-nav li .link {
 }
 
 .vh-container {
-    height: 95vh;
-    margin-top: 150px;
+    height: 100%;
+    margin: 150px 0px;
 }
 
 /* Style for the btn-toggle button */
