@@ -321,7 +321,7 @@ nav .desktop-nav li .link {
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    grid-template-areas: "a b" "c d";
+    grid-template-areas: "a b" "c d" "e f";
     padding-left: 0;
     padding-right: 0;
 }
@@ -342,6 +342,8 @@ nav .desktop-nav li .link {
 
 .clients-main-span-1 .container img{
     width: 100%;
+    height: 300px;
+    object-fit: cover;     
     border-radius: 16px 16px 0px 0px;
 }
 
@@ -539,7 +541,7 @@ nav .desktop-nav li .link {
     }
     
     .clients-main {
-        grid-template-areas: "a a" "b b" "c c" "d d";
+        grid-template-areas: "a a" "b b" "c c" "d d" "e e";
         padding: 0px 30px;
         padding-bottom: 75px;
     }
