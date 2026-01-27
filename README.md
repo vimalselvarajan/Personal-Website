@@ -1,14 +1,11 @@
-# Vimal Selvarajan personal website
+# Vimal Selvarajan – Personal Website
 
-Welcome to the repository for my personal website! 
+Welcome to the repository for my personal website.
 
-You can view the live website here:  
-**https://your-username.github.io/Personal-Website/** 
+**Live Website:**  
+https://vimalselvarajan.github.io/Personal-Website/
 
 ## Technology Stack
 
-- HTML/CSS/JavaScript
-- Hosted on GitHub Pages
-
-
-
+- HTML, CSS, JavaScript
+- GitHub Pages
