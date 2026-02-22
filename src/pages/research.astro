@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const papers = [
+  {
+    title: 'Unnamed Genome Project',
+    date: '',
+    description: 'Optimal read selection for de novo genome assembly using single-copy k-mers from ultra-deep sequencing data. Conducted at UCR under Dr. Stefano Lonardi.',
+    comingSoon: true,
+    skills: ['Genomic Data Science & Clustering', 'Biopython', 'Minimap2', 'NumPy', 'Pandas', 'Set Cover', 'Heaps / Priority Queues', 'Rolling Hash', 'Graph Construction & Analysis', 'Bit-level Data Structures', 'SQLite Database Design'],
+  },
+];
+---
+
+<Layout title="Research">
+  <div class="fade-in">
+    <h1 class="text-6xl font-light tracking-tight text-gray-900 dark:text-white pt-16 pb-16">Research</h1>
+
+    <ul class="space-y-6">
+      {papers.map((paper) => (
+        <li class="bg-white/70 dark:bg-white/5 backdrop-blur-md border border-gray-200/60 dark:border-white/10 rounded-2xl shadow-sm p-8">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h2 class="text-lg font-medium text-gray-900 dark:text-white">{paper.title}</h2>
+              {paper.comingSoon && (
+                <span class="bg-blue-50 dark:bg-blue-500/20 text-blue-500 dark:text-blue-400 text-xs font-medium rounded-full px-3 py-1">Coming Soon</span>
+              )}
+            </div>
+            <p class="text-gray-500 dark:text-gray-300 leading-relaxed">{paper.description}</p>
+            {paper.skills && (
+              <div class="flex flex-wrap gap-2">
+                {paper.skills.map((skill: string) => (
+                  <span class="bg-gray-100/80 dark:bg-white/10 text-gray-600 dark:text-gray-300 text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-white/18 transition-colors cursor-default">{skill}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

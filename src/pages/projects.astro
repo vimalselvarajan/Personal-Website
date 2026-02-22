@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import combatChess from '../assets/projects/combat_chess.png';
+import powerSupply from '../assets/projects/power_supply.png';
+import ergo from '../assets/projects/ergo.png';
+import hastestProject from '../assets/projects/hastest_project.jpg';
+import miniAssembler from '../assets/projects/mini_assembler.png';
+
+const projects = [
+  {
+    title: 'Combat Chess',
+    description: 'Designed a high-efficiency buck converter power supply that converts a 12V input to a stable 3.3V output using the TPS54202H. It delivers up to 2A of current, making it suitable for various industrial and consumer electronic applications.',
+    skills: ['C++', 'CMake', 'gtest', 'GitHub', 'Valgrind', 'Gcov', 'Lcov', 'Linux'],
+    image: combatChess,
+    href: 'https://github.com/vimalselvarajan/Combat-Chess',
+  },
+  {
+    title: '+12V to +3V3 Buck Converter',
+    description: 'Designed a high-efficiency buck converter power supply that converts a 12V input to a stable 3.3V output using the TPS54202H. It delivers up to 2A of current, making it suitable for various industrial and consumer electronic applications.',
+    skills: ['Altium', 'CAD'],
+    image: powerSupply,
+    href: 'https://github.com/vimalselvarajan/-12V-to-3V3-Buck-Convertor',
+  },
+  {
+    title: 'Driver Interfaces',
+    description: 'Developed a multi-layer PCB in order to display fault notifications from the Battery Management System (BMS), Vehicle Control Unit (VCU), vehicle speed, and temperature.',
+    skills: ['Altium', 'STM32', 'CubeIDE', 'Embedded C/C++', 'Git'],
+    image: ergo,
+    href: 'https://github.com/vimalselvarajan/24E-Dashboard-Gen-one',
+  },
+  {
+    title: 'Hastest DAC, DAQ, and Power Supply Control Suite',
+    description: 'In a project for Hastest Solutions, I designed a High Temperature Operating Life (HTOL) test for a Radio Frequency (RF) amplifier.',
+    skills: ['Python', 'Pandas', 'PyFTDI', 'PyVISA', 'Virtual Environment', 'SPI', 'USB', 'GPIB'],
+    image: hastestProject,
+    href: 'https://github.com/vimalselvarajan/Hastest-SPI-DAC-and-Power-Control',
+  },
+  {
+    title: 'Mini Genome Assembler',
+    description: 'An educational mini genome assembler for CS 144 (Algorithms for Bioinformatics) that identifies maximum suffix–prefix overlaps, builds unitigs, and reconstructs a genome from error-free reads.',
+    skills: ['Python', 'Biopython', 'NetworkX', 'FASTA Parsing', 'Graph Algorithms'],
+    image: miniAssembler,
+    href: 'https://github.com/vimalselvarajan/mini-genome-assembler',
+  },
+];
+---
+
+<Layout title="Projects">
+  <div class="fade-in">
+    <h1 class="text-6xl font-light tracking-tight text-gray-900 dark:text-white pt-16 pb-16">Projects</h1>
+
+    <div class="space-y-6">
+      {projects.map((project) => {
+        const cardClass = "flex flex-col sm:flex-row bg-white/70 dark:bg-white/5 backdrop-blur-md border border-gray-200/60 dark:border-white/10 rounded-3xl shadow-sm overflow-hidden transition-all duration-300" + (project.href ? " hover:shadow-md hover:scale-[1.01]" : "");
+        const inner = (
+          <>
+            {project.image
+              ? <Image src={project.image} alt={project.title} width={576} class="w-full sm:w-72 h-52 sm:h-auto object-cover" />
+              : <div class="w-full sm:w-72 h-52 sm:h-auto bg-gray-100 dark:bg-white/10" />
+            }
+            <div class="p-8 flex flex-col gap-4 justify-between">
+              <div class="space-y-3">
+                <h2 class="text-lg font-medium text-gray-900 dark:text-white">{project.title}</h2>
+                <p class="text-gray-500 dark:text-gray-300 leading-relaxed">{project.description}</p>
+              </div>
+              {project.skills && (
+                <div class="flex flex-wrap gap-2">
+                  {project.skills.map((skill: string) => (
+                    <span class="bg-gray-100/80 dark:bg-white/10 text-gray-600 dark:text-gray-300 text-sm rounded-full px-3 py-1 hover:bg-gray-200 dark:hover:bg-white/18 transition-colors cursor-default">{skill}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </>
+        );
+        return project.href
+          ? <a href={project.href} target="_blank" rel="noopener noreferrer" class={cardClass}>{inner}</a>
+          : <div class={cardClass}>{inner}</div>;
+      })}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

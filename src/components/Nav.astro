@@ -1,0 +1,211 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/research', label: 'Research' },
+  { href: '/projects', label: 'Projects' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  id="nav-header"
+  class="fixed top-0 inset-x-0 z-50 h-16 transition-all duration-300"
+>
+  <!-- Desktop: logo left, links right -->
+  <div class="hidden md:flex items-center justify-between h-full px-12">
+
+    <!-- Left: logo -->
+    <a href="/" aria-label="Home" class="logo-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="42" height="42" fill="currentColor" aria-hidden="true">
+        <path d="m 30.985419,17.518211 v 0.790304 q -1.537889,0.277675 -2.328193,0.982541 -1.132057,1.046619 -2.007799,3.203935 L 16.54635,47.143935 H 15.756046 L 4.9053839,22.174598 Q 4.0723607,20.252236 3.7306076,19.825045 3.1966183,19.162898 2.4063142,18.799785 1.6373697,18.415313 0.31307632,18.308515 V 17.518211 H 12.146278 v 0.790304 q -2.007799,0.192237 -2.6058673,0.683507 -0.598068,0.49127 -0.598068,1.260214 0,1.067979 0.9825403,3.332093 l 7.369052,16.980859 6.835062,-16.767263 q 1.0039,-2.47771 1.0039,-3.438891 0,-0.619427 -0.619427,-1.174776 -0.619428,-0.576709 -2.093238,-0.811664 -0.106798,-0.02136 -0.363113,-0.06408 v -0.790304 z m 20.590627,-0.662146 v 10.017638 h -0.790304 q -0.384473,-2.883542 -1.388373,-4.592308 -0.98254,-1.708765 -2.819463,-2.712665 -1.836923,-1.0039 -3.802003,-1.0039 -2.221396,0 -3.673846,1.367013 -1.452451,1.345653 -1.452451,3.075778 0,1.324293 0.918461,2.413631 1.324294,1.601968 6.301074,4.271914 4.058318,2.178677 5.532128,3.353453 1.49517,1.153417 2.285474,2.734025 0.811664,1.580608 0.811664,3.310733 0,3.289374 -2.563148,5.681646 -2.541789,2.370912 -6.557389,2.370912 -1.260214,0 -2.370912,-0.192236 -0.662147,-0.106798 -2.755384,-0.768944 -2.071879,-0.683507 -2.627228,-0.683507 -0.533989,0 -0.854382,0.320394 -0.299034,0.320394 -0.448551,1.324293 h -0.790304 v -9.9322 h 0.790304 q 0.555348,3.118497 1.49517,4.677746 0.939821,1.537889 2.862182,2.563148 1.943721,1.02526 4.250554,1.02526 2.669947,0 4.207836,-1.409732 1.559248,-1.409731 1.559248,-3.332093 0,-1.067978 -0.598068,-2.157316 -0.576708,-1.089338 -1.815563,-2.02916 -0.833023,-0.640787 -4.549588,-2.712665 -3.716566,-2.093238 -5.297174,-3.332093 -1.559249,-1.238855 -2.370912,-2.734025 -0.811664,-1.49517 -0.811664,-3.289374 0,-3.118497 2.392272,-5.361252 2.392272,-2.264114 6.087478,-2.264114 2.306833,0 4.891341,1.132057 1.196136,0.533989 1.687406,0.533989 0.555349,0 0.897102,-0.320393 0.363113,-0.341754 0.576709,-1.345653 z m 9.739965,25.481967 q 1.0039,0 1.687406,0.704866 0.683507,0.683506 0.683507,1.666046 0,0.982541 -0.704866,1.687406 -0.683506,0.683507 -1.666047,0.683507 -0.98254,0 -1.687406,-0.683507 -0.683506,-0.704865 -0.683506,-1.687406 0,-1.0039 0.683506,-1.687406 0.704866,-0.683506 1.687406,-0.683506 z" />
+      </svg>
+    </a>
+
+    <!-- Right: all links -->
+    <div class="flex items-center gap-9">
+      {links.map(({ href, label }) => (
+        <a href={href} class:list={['nav-link', { active: currentPath === href }]}>
+          {label}
+        </a>
+      ))}
+    </div>
+
+  </div>
+
+  <!-- Mobile: logo left, hamburger right -->
+  <div class="md:hidden flex items-center justify-between h-full px-6">
+    <a href="/" aria-label="Home" class="logo-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="42" height="42" fill="currentColor" aria-hidden="true">
+        <path d="m 30.985419,17.518211 v 0.790304 q -1.537889,0.277675 -2.328193,0.982541 -1.132057,1.046619 -2.007799,3.203935 L 16.54635,47.143935 H 15.756046 L 4.9053839,22.174598 Q 4.0723607,20.252236 3.7306076,19.825045 3.1966183,19.162898 2.4063142,18.799785 1.6373697,18.415313 0.31307632,18.308515 V 17.518211 H 12.146278 v 0.790304 q -2.007799,0.192237 -2.6058673,0.683507 -0.598068,0.49127 -0.598068,1.260214 0,1.067979 0.9825403,3.332093 l 7.369052,16.980859 6.835062,-16.767263 q 1.0039,-2.47771 1.0039,-3.438891 0,-0.619427 -0.619427,-1.174776 -0.619428,-0.576709 -2.093238,-0.811664 -0.106798,-0.02136 -0.363113,-0.06408 v -0.790304 z m 20.590627,-0.662146 v 10.017638 h -0.790304 q -0.384473,-2.883542 -1.388373,-4.592308 -0.98254,-1.708765 -2.819463,-2.712665 -1.836923,-1.0039 -3.802003,-1.0039 -2.221396,0 -3.673846,1.367013 -1.452451,1.345653 -1.452451,3.075778 0,1.324293 0.918461,2.413631 1.324294,1.601968 6.301074,4.271914 4.058318,2.178677 5.532128,3.353453 1.49517,1.153417 2.285474,2.734025 0.811664,1.580608 0.811664,3.310733 0,3.289374 -2.563148,5.681646 -2.541789,2.370912 -6.557389,2.370912 -1.260214,0 -2.370912,-0.192236 -0.662147,-0.106798 -2.755384,-0.768944 -2.071879,-0.683507 -2.627228,-0.683507 -0.533989,0 -0.854382,0.320394 -0.299034,0.320394 -0.448551,1.324293 h -0.790304 v -9.9322 h 0.790304 q 0.555348,3.118497 1.49517,4.677746 0.939821,1.537889 2.862182,2.563148 1.943721,1.02526 4.250554,1.02526 2.669947,0 4.207836,-1.409732 1.559248,-1.409731 1.559248,-3.332093 0,-1.067978 -0.598068,-2.157316 -0.576708,-1.089338 -1.815563,-2.02916 -0.833023,-0.640787 -4.549588,-2.712665 -3.716566,-2.093238 -5.297174,-3.332093 -1.559249,-1.238855 -2.370912,-2.734025 -0.811664,-1.49517 -0.811664,-3.289374 0,-3.118497 2.392272,-5.361252 2.392272,-2.264114 6.087478,-2.264114 2.306833,0 4.891341,1.132057 1.196136,0.533989 1.687406,0.533989 0.555349,0 0.897102,-0.320393 0.363113,-0.341754 0.576709,-1.345653 z m 9.739965,25.481967 q 1.0039,0 1.687406,0.704866 0.683507,0.683506 0.683507,1.666046 0,0.982541 -0.704866,1.687406 -0.683506,0.683507 -1.666047,0.683507 -0.98254,0 -1.687406,-0.683507 -0.683506,-0.704865 -0.683506,-1.687406 0,-1.0039 0.683506,-1.687406 0.704866,-0.683506 1.687406,-0.683506 z" />
+      </svg>
+    </a>
+
+    <button id="mobile-toggle" aria-label="Toggle menu" class="hamburger">
+      <div class="hamburger-lines">
+        <span class="line line-top"></span>
+        <span class="line line-mid"></span>
+        <span class="line line-bot"></span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div
+    id="mobile-menu"
+    class="mobile-dropdown hidden md:hidden"
+  >
+    {links.map(({ href, label }) => (
+      <a href={href} class="mobile-nav-link">{label}</a>
+    ))}
+  </div>
+</header>
+
+<style>
+  header {
+    background: var(--nav-bg);
+  }
+
+  /* Scrolled: Apple-style glass effect */
+  header.scrolled {
+    background: var(--nav-bg-scrolled);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--nav-border);
+  }
+
+  .nav-link {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--nav-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--nav-text-muted);
+  }
+
+  .nav-link.active {
+    color: var(--nav-text-muted);
+  }
+
+  .logo-link {
+    color: var(--nav-text);
+    display: flex;
+    align-items: center;
+    transition: color 0.15s ease;
+  }
+
+  .logo-link:hover {
+    color: var(--nav-text-muted);
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: var(--nav-text);
+    transition: color 0.15s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger:hover {
+    color: var(--nav-text-muted);
+  }
+
+  .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .line {
+    display: block;
+    width: 18px;
+    height: 1px;
+    background: currentColor;
+    border-radius: 1px;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
+  }
+
+  /* Each line center is offset by (height + gap): 1px + 6px = 7px from neighbour center */
+  .hamburger.is-open .line-top {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.is-open .line-mid {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .hamburger.is-open .line-bot {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-dropdown {
+    background: var(--mobile-dropdown-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--nav-border);
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 16px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: var(--mobile-link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mobile-link-border);
+    transition: color 0.15s ease;
+  }
+
+  .mobile-nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--nav-text-muted);
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const header = document.getElementById('nav-header');
+
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    const isOpen = !menu?.classList.contains('hidden');
+    toggle?.classList.toggle('is-open', isOpen);
+  });
+
+  // Close when clicking outside the header
+  document.addEventListener('click', (e) => {
+    if (!header?.contains(e.target as Node)) {
+      menu?.classList.add('hidden');
+      toggle?.classList.remove('is-open');
+    }
+  });
+
+  // Scroll-based glass effect
+  function onScroll() {
+    if (window.scrollY > 0) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // apply correct state on initial load
+</script>
