@@ -60,23 +60,28 @@ const { title } = Astro.props;
 
 <style>
   #theme-toggle {
-    background: rgba(0, 0, 0, 0.06);
-    color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
   }
 
   #theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.55);
+    transform: scale(1.08);
   }
 
   :global(html.dark) #theme-toggle {
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.45);
   }
 
   :global(html.dark) #theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.6);
+    transform: scale(1.08);
   }
 </style>
 
